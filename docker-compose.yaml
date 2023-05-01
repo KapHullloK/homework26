@@ -13,7 +13,6 @@ services:
       pg:
         condition: service_healthy
 
-
   pg:
     image:
       postgres:latest
