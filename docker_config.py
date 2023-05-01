@@ -1,0 +1,1 @@
+SQLALCHEMY_DATABASE_URI = "postgresql://flask_app:flask_pass@pg/flask_app"
