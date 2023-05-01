@@ -1,0 +1,12 @@
+name: hw26
+on: [push]
+jobs:
+  build_and_push:
+    runs-on: ubuntu-latest
+    steps:
+      - name: clone code
+        uses: actions/checkout@v2
+      - name: docker build
+        run: docker build -t afrokirill/first_kir:$GITHUB_REF_NAME-$GITHUB_RUN_ID .
+      - name: docker push
+        run: docker push afrokirill/first_kir:$GITHUB_REF_NAME-$GITHUB_RUN_ID
